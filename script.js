@@ -1,12 +1,23 @@
 search = document.getElementById("search");
 engine = document.getElementById("engine");
 enginesel = document.getElementById("enginesel");
+engine.value = localStorage.getItem("engine")
+enginesel.value = localStorage.getItem("enginesel")
 
-  engine.value = localStorage.getItem("engine")
-  enginesel.value = localStorage.getItem("enginesel")
+if (engine.value==""){
+  enginesel.value="https://google.com/search?q="
+  engine.value="https://google.com/search?q="
+  save();
+}
+
 
 search.onkeydown = function(e){
    if(e.keyCode == 13){
+    if (engine.value==""){
+      enginesel.value="https://google.com/search?q="
+      engine.value="https://google.com/search?q="
+      save();
+    }
      window.location.href=engine.value+search.value;
    }
 };
@@ -30,3 +41,50 @@ function save() {
   console.log("field: "+localStorage.getItem("engine"))
   console.log("select:"+localStorage.getItem("enginesel"))
 }
+
+// Get the modal
+var modal = document.getElementById("settings");
+
+// Get the button that opens the modal
+var btn = document.getElementById("settingsBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+// api url
+const api_url = 
+      "https://bing.biturl.top/";
+  
+// Defining async function
+async function getapi(url) {
+    
+    // Storing response
+    const response = await fetch(url);
+    
+    // Storing data in form of JSON
+    var data = await response.json();
+    console.log(data);
+    if (response) {
+        hideloader();
+    }
+    show(data);
+}
+// Calling that async function
+console.log(getapi(api_url));
