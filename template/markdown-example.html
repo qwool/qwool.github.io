@@ -1,31 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <meta charset="utf-8" />
     <title>qwool</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
-    <link rel="stylesheet" href="../styles.css">
-</head>
-<body>
-<pre><div id="md">
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <pre><div id="md">
 
 
 <!-- ur markdown code goes here-->
 # Markdown syntax test
 
+---
+
 ## Headers
 
 # This is a Heading h1
-## This is a Heading h2 
-###### This is a Heading h6
+## This is a Heading h2
+### This is a Heading h3
+#### This is a Heading h4
+##### This is a Heading h5
 
 ## Emphasis
-
-*This text will be italic*  
+*This text will be italic*
 _This will also be italic_
 
-**This text will be bold**  
+**This text will be bold**
 __This will also be bold__
 
 _You **can** combine them_
@@ -69,17 +71,16 @@ This web site is using `markedjs/marked`.
     <div id="content"></div>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        const content = document.getElementById('content')
-        const md = document.getElementById('md')
-        mdText=md.innerText
-        md.innerHTML=""
-        console.log (mdText)
-        var converter = new showdown.Converter(),
-            text = mdText,
-            html = converter.makeHtml(text);
-            console.log("output:"+html)
-            content.innerHTML=html
+      const content = document.getElementById("content");
+      const md = document.getElementById("md");
+      mdText = md.innerText;
+      md.innerHTML = "";
+      console.log(mdText);
+      var converter = new showdown.Converter(),
+        text = mdText,
+        html = converter.makeHtml(text);
+      console.log("output:" + html);
+      content.innerHTML = html;
     </script>
-</body>
-
+  </body>
 </html>
