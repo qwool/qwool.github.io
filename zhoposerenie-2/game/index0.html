@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>qwool</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <link rel="stylesheet" href="../../styles.css">
+</head>
+<body>
+<pre><div id="md">
+
+
+<!-- ur markdown code goes here-->
+
+# zhoposerenie da gaem 2
+_[(предложите нормальное название)](https://t.me/qwool)_
+
+---
+
+версия 2 жопосерения
+
+## гайд
+
+WASD или стрелочки - ходить
+
+ЛКМ - стрелять
+
+ПКМ и выбрать предмет - строить
+
+ESC - меню в меню есть сохранение, загрузка и режим разработчика
+
+## режим разработчика
+
+в режиме разработчика есть читы и дебаг-информация
+### читы:
+M: карта
+
+T: телепорт на позицию мышки
+
+X: заспавнить xpOrb(опыт)
+
+
+</div></pre>
+    <div id="content"></div>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        const content = document.getElementById('content')
+        const md = document.getElementById('md')
+        mdText=md.innerText
+        md.innerHTML=""
+        console.log (mdText)
+        var converter = new showdown.Converter(),
+            text = mdText,
+            html = converter.makeHtml(text);
+            console.log("output:"+html)
+            content.innerHTML=html
+    </script>
+</body>
+
+</html>

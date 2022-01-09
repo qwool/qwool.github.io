@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>qwool</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<noscript>this website beraks without JS. please enable it</noscript>
+<pre><div id="md">
+# qwool
+
+[вставить текст](https://github.com/qwool) / [ссылка2](https://github.com/qwool) / [лолхд](https://github.com/qwool)
+
+---
+
+## элементы включенные в мой css:
+
+[ссылки](https://github.com/qwool)
+
+</div></pre>
+<div id="content"></div>
+<footer> @qwool, 2021</footer>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        const content = document.getElementById('content')
+        const md = document.getElementById('md')
+        mdText=md.innerText
+        md.innerHTML=""
+        console.log (mdText)
+        var converter = new showdown.Converter(),
+            text = mdText,
+            html = converter.makeHtml(text);
+            console.log("output:"+html)
+            content.innerHTML=html
+    </script>
+</body>
+
+</html>

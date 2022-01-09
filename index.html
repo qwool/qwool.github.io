@@ -1,142 +1,36 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
+
+<!doctype html>
+<html>
 
 <head>
-  <meta charset="utf-8">
-  <title>qwool's startpage</title>
-  <link rel="stylesheet" href="./styles.css">
-  <style>
-    #engine {
-      width: 30%;
-      text-align: left;
-    }
-
-    #personal {
-      text-align: right;
-    }
-
-    /* The Modal (background) */
-    .modal {
-      display: none;
-      /* Hidden by default */
-      position: fixed;
-      /* Stay in place */
-      z-index: 1;
-      /* Sit on top */
-      padding-top: 100px;
-      /* Location of the box */
-      left: 0;
-      top: 0;
-      width: 100%;
-      /* Full width */
-      height: 100%;
-      /* Full height */
-      overflow: auto;
-      /* Enable scroll if needed */
-      background-color: rgb(0, 0, 0);
-      /* Fallback color */
-      background-color: rgba(0, 0, 0, 0.4);
-      /* Black w/ opacity */
-    }
-
-    /* Modal Content */
-    .modal-content {
-      background-color: #fefefe;
-      margin: auto;
-      padding: 20px;
-      border: 1px solid #888;
-      width: 80%;
-    }
-
-    /* The Close Button */
-    .close {
-      color: #aaaaaa;
-      float: right;
-      font-size: 28px;
-      font-weight: bold;
-    }
-
-    .close:hover,
-    .close:focus {
-      color: #fefefe;
-      /*text-decoration: none;*/
-      cursor: pointer;
-    }
-
-    #search {
-      width: 60%;
-      border: 3px solid rgba(0, 0, 0, 0.7);
-      border-radius: 10px;
-      line-height: 20px;
-      text-align: left;
-    }
-
-    #thing {
-      font-weight: bold;
-      width: 100%;
-      height: 100px;
-      position: absolute;
-      top: 0;
-      bottom: 20%;
-      left: 0;
-      right: 0;
-      text-align: center;
-      margin: auto;
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .modal-content {
-        background-color: rgb(30, 30, 30);
-        margin: auto;
-        padding: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        width: 80%;
-      }
-      #search {
-      width: 60%;
-      border: 3px solid rgba(255, 255, 255, 0.2);
-      border-radius: 10px;
-      line-height: 20px;
-      text-align: left;
-    }
-    }
-  </style>
+    <meta charset="utf-8" />
+    <title>qwool</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    <link rel="stylesheet" href="./new.css">
 </head>
+<body>
+  <header>
+    <h1 id="qwool">qwool</h1>
+      <a href="./index.html">main</a> /
+      <a href="./startpage.html">startpage</a> /
+      <a href="https://t.me/qwool">telegram</a> /
+      <a href="https://namemc.com/qwool">minceraft</a> /
+      <a href="https://twitter.com/qwoolxd">twitter</a>
 
-<div id="thing">
-  <h1>startpage thing</h1>
-  <input type="text" id="search" name="search">
-</div>
-</body>
-
-<!-- Trigger/Open The Modal -->
-
-
-<!-- The Modal -->
-<div id="settings" class="modal">
-
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <h2>search engine</h2>
-    <input type="text" id="engine" placeholder="search engine url" value="https://google.com/search?q=">
-    <select id="enginesel" name="">
-      <option value="https://google.com/search?q=">Google</option>
-      <option value="https://duckduckgo.com/?q=">DuckDuckGo</option>
-      <option value="https://bing.com/search?q=">Bing</option>
-      <option value="">Other</option>
-    </select>
-    <h2>theme</h2>
-    <input type="checkbox">bing's daily wallpaper(not made yet)</input>
-  </div>
-
-</div>
-
-
-<footer>
-  <a href="#" id="settingsBtn">settings</a> | <a id="personal" href="./personal/index.html">qwool, 2021</a>
-</footer>
-
-<script src="./script.js" charset="utf-8"></script>
-
+  </header>
+  <div id="content">
+    <h1>рандомные ссылки</h1>
+  <h3 id="indexhtml"><a href="./startpage.html">стартовая страница</a></h3>
+  <p>сделанная за два вечера потому что я практиковал webstorage в жаваскрипте</p>
+  <h3 id="markdowntemplatemarkdownexamplehtml"><a href="./markdown/htmd-index.html">шаблон для markdown страниц</a></h3>
+  <p>преобразует markdown в html, шрифты + тёмная тема</p>
+  <p>использует marked.js и работает на стороне браузера. текст вставляется внутрь <code>&lt;div id="md"&gt;</code></p>
+  <h3 id="httpsgithubcomqwoolsqripts"><a href="https://github.com/qwool/bin">скрипты под линукс</a></h3>
+  <p>хз зачем я их вообще делал</p>
+  <h3 id="zhoposerenieindexhtml"><a href="./zhoposerenie/index.html">жопосерение</a></h3>
+  <p>оргинальное zhoposerenie da gaem сделанное мной под ником zeroonbin весной 2018 года (Я НАПИЗДЕЛ Я СОЗДАЛ ОРИГИНАЛ И Я ИМ НИХУЯ НЕ ГОРЖУСЬ
+  -05.03.2021)</p>
+  <h3 id="2zhoposerenie2indexhtml"><a href="./zhoposerenie-2/index.html">жопосерение 2</a></h3>
+  <p>моя хуёвая поделка из 2020 или 2021, скорее всего дуже хуже оригинала</p>
+  </div></body>
 </html>
