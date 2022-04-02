@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guess the root</title>
+    <title>the root riddler</title>
     <link rel="stylesheet" href="./original-styles.css" />
     <link rel="stylesheet" href="./styles.css" />
 </head>
@@ -15,33 +15,35 @@
         <a onclick="openModal('openhelp')" id="help">?</a>
          <a onclick='openModal("opensettings")' id="help">S</a>
     </div>
+    <span id="bottomRight">
+        <a id="dailySwitch" href="#daily">daily</a>
+    </span>
 
-      
-    <div class="centered">
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <p id="modalText"></p>
-                <!-- preset modal content start -->
-                <span id="gameHelp" style="display: none;">
-                    <h1 id="how-to-play">how to play</h1>
-                    <p>the goal is to get the number on the screen by picking numbers that you will elevate to the power of 2.<br>the number is truncated to 8 numbers after the dot so u don&#39;t lose your sanity.<br>for example, to get 81 you will need to type 9.<br>but you won&#39;t always get so lucky, so for the numbers like 87 you&#39;ll have to guess 9.327379053<br>there are more complex strategies, but i&#39;ll let you discover them for urself :)</p>                    
-                </span>
-                <span id="gameSettings" style="display: none;">
-                    <h1>settings menu (todo)</h1>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label> some switch and shit <br>
-                      <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                      </label> another one for looks ig    
-                </span>
-                <!-- preset modal content end -->
-            </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalText"></p>
+            <!-- preset modal content start -->
+            <span id="gameHelp" style="display: none;">
+                <h1 id="how-to-play">how to play</h1>
+                <p>the goal is to get the number on the screen by picking numbers that you will elevate to the power of 2.<br>the number is truncated to 8 numbers after the dot so u don&#39;t lose your sanity.<br>for example, to get 81 you will need to type 9.<br>but you won&#39;t always get so lucky, so for the numbers like 87 you&#39;ll have to guess 9.327379053<br>there are more complex strategies, but i&#39;ll let you discover them for urself :)</p>                    
+            </span>
+            <span id="gameSettings" style="display: none;">
+                <h1>settings menu (todo)</h1>
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label> some switch and shit <br>
+                  <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider round"></span>
+                  </label> another one for looks ig    
+            </span>
+            <!-- preset modal content end -->
         </div>
-        <span>your random number is </span>
+    </div>
+    <div class="centered">
+        <span>the root of </span>
         <span id="randomNumber"></span>
         <br>
         <input cols="2" placeholder="ya gey" type="number" onkeyup="handleInput(this)" id="inputField"></input>^2=<br><span id="answer"></span>
