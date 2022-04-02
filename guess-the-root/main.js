@@ -20,8 +20,7 @@ function handleInput(inputField) {
     if (truncatedNumber == randomNumber) {
         openModal("you won!")
         generate()
-        /*inputField.value = "0"
-        handleInput(inputField)*/
+        inputField.value = ""
     }
 }
 /* window.addEventListener('keypress', function(e) {

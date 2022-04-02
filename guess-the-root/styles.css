@@ -1,6 +1,6 @@
 * {
     font-family: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
-    font-size: larger;
+    text-size-adjust: auto;
     /*font-weight: bold; shit idea */
 }
 #help{
@@ -18,7 +18,7 @@
 }
 
 #inputField {
-    width: 60%;
+    width: 80%;
 }
 
 input[type="number"]::-webkit-outer-spin-button,
