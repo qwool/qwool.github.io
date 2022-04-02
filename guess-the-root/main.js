@@ -29,14 +29,22 @@ function handleInput(inputField) {
 
 function openModal(text) {
   modal.style.display = "block";
-  modalText.innerText = text;
+  if (text=="openhelp"){
+    modalText.innerHTML=document.getElementById("gameHelp").innerHTML;
+  }else if (text=="opensettings"){
+    modalText.innerHTML=document.getElementById("gameSettings").innerHTML;
+  }else{
+    modalText.innerHTML = text;
+  }
 }
 modalClose.onclick = function() {
   modal.style.display = "none";
+  modalText.innerHTML = "";
 }
 
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
+    modalText.innerHTML = "";
   }
 }
