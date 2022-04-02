@@ -29,8 +29,11 @@ window.addEventListener('load', function () {
   console.log(mode)
   if (mode=="daily"){
     generateDaily()
+    document.getElementById("dailySwitch").innerText="random"
+    document.getElementById("dailySwitch").href="."
   }else{
     generateRandom()
+    document.getElementById("dailySwitch").innerText="daily"
   }
   inputField.focus()
   
