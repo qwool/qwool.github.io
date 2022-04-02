@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the root</title>
+    <link rel="stylesheet" href="../original-styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <a onclick="openModal('help text (todo)')" id="help">?</a>
+    <div class="centered">
+        <div id="modal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="modalText">im gay</p>
+            </div>
+            <!-- Modal content end -->
+        </div>
+        <span>your random number is </span>
+        <span id="randomNumber"></span>
+        <br>
+        <input placeholder="type the number..." type="number" onkeyup="handleInput(this)" id="inputField"></input>^2=<br><span id="answer"></span>
+    </div>
+    <script src="./main.js"></script>
+    <noscript>//this website doesn't work w/o javascript. enable it if you want to use this page</noscript>
+    
+</body>
+
+</html>

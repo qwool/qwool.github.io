@@ -1,0 +1,43 @@
+//The first season of the insanity SMP has ended quite abruptly, I will not be explaining why in this video it's a bit complicated.
+
+const modal = document.getElementById("modal");
+const modalClose = document.getElementsByClassName("close")[0];
+const modalText = document.getElementById("modalText");
+const inputField = document.getElementById("inputField");
+
+function generate() {
+    randomNumber = Math.floor(Math.random(1, 500) * 220)
+    document.getElementById("randomNumber").innerHTML = randomNumber;
+}
+window.addEventListener('load', function () {
+    generate()
+    inputField.focus()
+}, false);
+
+function handleInput(inputField) {
+    truncatedNumber = (Math.round(inputField.value ** 2 * 10000000) / 10000000)
+    document.getElementById("answer").innerText = truncatedNumber;
+    if (truncatedNumber == randomNumber) {
+        openModal("you won!")
+        generate()
+        /*inputField.value = "0"
+        handleInput(inputField)*/
+    }
+}
+/* window.addEventListener('keypress', function(e) {
+    inputField.value+=e.key;
+}); */
+
+function openModal(text) {
+  modal.style.display = "block";
+  modalText.innerText = text;
+}
+modalClose.onclick = function() {
+  modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
