@@ -1,10 +1,10 @@
 * {
     font-family: Consolas, monaco, 'Ubuntu Mono', 'Liberation Mono', 'Courier New', Courier, monospace;
-    text-size-adjust: auto;
+    font-size: larger;
     /*font-weight: bold; shit idea */
 }
-#help{
-    position: fixed;
+#topBtns{
+    position: absolute;
     left:20px;
     top:10px;
     cursor:pointer;
@@ -19,6 +19,9 @@
 
 #inputField {
     width: 80%;
+    height: 20%;
+    word-wrap: break-word;
+    word-break: break-all;
 }
 
 input[type="number"]::-webkit-outer-spin-button,

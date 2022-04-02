@@ -50,14 +50,14 @@ h6 {
 }
 
 body {
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 hr {
   opacity: 0.5;
 }
 a {
-  color: white;
+  color: black;
   text-decoration: underline;
 }
 header {
@@ -90,6 +90,9 @@ details {
   background: rgb(20, 20, 20);
 }
 @media (prefers-color-scheme: dark) {
+  a {
+    color: white;
+  }
   body {
     color: white;
     /*background: rgb(30, 30, 30);*/
