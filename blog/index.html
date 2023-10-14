@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>i hate js</title>
+  <link rel="stylesheet" href="./new.css">
+  <link rel="stylesheet" href="./cards.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </meta>
+</head>
+<body style="background:black">
+  <main>
+  <header>
+    <a href="https://qwool.github.io/blog"> <h2>i hate js</h2> </a>
+    <a href="https://qwool.github.io">main</a> /
+    <a href="https://qwool.github.io/blog">blog</a>
+  </header>
+  <noscript>turn on JS if you hav fat fingers or just really like clickable cards</noscript>
+  <div class="grid">
+    <div data-href="midwest-emo.html" class="card">
+  <a class="title" href="midwest-emo.html">midwest emo and why nick hartkop should be put down</a>
+  <p>Oct 14, 2023 22:05</p>
+  <p>there are always people who make me ashamed to like music in general, and usually it's me</p>
+</div><div data-href="README.html" class="card">
+  <a class="title" href="README.html">frontpost</a>
+  <p>Oct 14, 2023 18:53</p>
+  <p>a suckless, self-explanatory CMS in 180 lines of code (80ms build time)
+</p>
+</div>
+  </div>
+  </main>
+
+  <footer style="margin-top: 5rem">made with <a href="https://github.com/qwool/frontpost">frontpost</a> by me!!! </footer>
+    <script>
+      const clickableDivs = document.querySelectorAll(".card");
+  
+      clickableDivs.forEach((div) => {
+        div.addEventListener("click", function() {
+          const href = div.getAttribute("data-href");
+          
+          if (href) window.location.href=href;
+        });
+      });
+    </script>
+  
+</body>
+
+</html>

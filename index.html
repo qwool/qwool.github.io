@@ -1,36 +1,70 @@
-
 <!doctype html>
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <title>qwool</title>
-    <link rel="stylesheet" href="./new.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>qwool</title>
+  <link rel="stylesheet" href="./custom.css">
+  <link rel="stylesheet" href="./fonts/inter.css"> 
 </head>
-<body>
-  <header>
-    <h1 id="qwool" style="color:#0057B8">qwool</h1>
-    <div id="links" style="color:#FFD700">
-      <a href="./index.html">main</a> /
-      <a href="./startpage.html">startpage</a> /
-      <a href="https://t.me/qwool">telegram</a> /
-      <a href="https://namemc.com/qwool">minceraft</a> /
-      <a href="https://twitter.com/qwoolxd">twitter</a>
-    </div>
 
+<body style="background-color: black; color:white">
+  <header>
+    <h1 id="qwool">qwool</h1>
+    <div id="links">
+      <a href="./blog/index.html">blog</a> /
+      <a href="https://github.com/qwool">github</a> /
+      <a href="https://namemc.com/qwool">minceraft</a>
+    </div>
   </header>
-  <div id="content">
-    <h1>рандомні посилання</h1>
-  <h3 id="indexhtml"><a href="./startpage.html">startpage thing</a></h3>
-  <p>had to practice js webstorage idk</p>
-  <h3 id="markdowntemplatemarkdownexamplehtml"><a href="./markdown/htmd-index.html">markdown template</a></h3>
-  <p>converts markdown to html, also gives it a dark theme<br>
-  uses marked.js, paste code into <code>&lt;div id="md"&gt;</code></p>
-  <h3 id="httpsgithubcomqwoolbin"><a href="https://github.com/qwool/bin">linux scripts</a></h3>
-  <p>skull emoji</p>
-  <h3 id="guessTheRoot"><a href="./guess-the-root">guess the root</a></h3>
-  <p>yeah</p>
-  <h3 id="zhoposerenieindexhtml"><a href="./zhoposerenie/index.html">zoposerenje</a></h3>
-  <p>my 2018 thing, here just for memories. </p> <a href="./zhoposerenie-2/index.html">also part 2</a>
-  </div></body>
+  <main id="content">
+    
+    <h1>random links</h1>
+    <noscript>
+      sorry you guys with no js dont get clickable
+      cards (the titles are still clickable)
+    </noscript>
+    <div class="grid">
+      <div data-href="./blog" class="card">
+        <h3><a href="./blog">my blog!!!::</a></h3>
+        <p>i kinda post there often enough, pls take a look</p>
+      </div>
+      <div data-href="https://github.com/qwool/frontpost" class="card">
+        <h3><a href="https://github.com/qwool/frontpost">frontpost, a blog generator::</a></h3>
+        <p>does exactly what you think it does, doesn't do exactly what you don't want it to do</p>
+      </div>
+    <div data-href="./startpage.html" class="card">
+      <h3><a href="./startpage.html">startpage thing::</a></h3>
+      <p>had to practice js webstorage idk</p>
+    </div>
+    <div data-href="./markdown/htmd-index.html" class="card">
+      <h3><a href="./markdown/htmd-index.html">markdown template::</a></h3>
+      <p>converts markdown to html, also gives it a dark theme<br>
+        uses marked.js, paste code into <code>&lt;div id="md"&gt;</code></p>
+    </div>
+    <div data-href="./games/guess-the-root" class="card">
+      <h3><a href="./games/guess-the-root">guess the root::</a></h3>
+      <p>a rly cool wordle-like game for 10 mins or something?? it doesn't get old that fast</p>
+    </div>
+    <div data-href="./games" class="card">
+      <h3><a href="./games">my rly old games::</a></h3>
+      <p>my 2018 thing, here just for memories. </p> <a href="./zhoposerenie-2/index.html">also part 2</a>
+    </div>
+  </div>
+  </main>
+  <script>
+    const clickableDivs = document.querySelectorAll(".card");
+
+    clickableDivs.forEach((div) => {
+      div.addEventListener("click", function() {
+        const href = div.getAttribute("data-href");
+        
+        if (href) window.location.href=href;
+      });
+    });
+  </script>
+
+</body>
+
 </html>

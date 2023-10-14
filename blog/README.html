@@ -1,0 +1,146 @@
+<html>
+<head>
+  <title>frontpost</title>
+  <link rel="stylesheet" href="./new.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  .nonimportant {
+    font-weight:300;
+  }
+  img {
+    max-height: 40vh;
+  }
+</style>
+</head>
+<body style="background:black">
+  <main>
+    <header>
+      <a href="https://qwool.github.io/blog"> <h2>i hate js</h2> </a>
+      <a href="https://qwool.github.io">main</a> /
+      <a href="https://qwool.github.io/blog">blog</a>
+    </header>
+    <p class="nonimportant">
+  <span id="author">by {fm author}</span>
+  <span id="created"> on undefined 0NaN, NaN 0NaN:0NaN</span>
+  </p>
+  <h1>frontpost</h1>
+<p>a suckless, self-explanatory CMS in 180 lines of code (80ms build time)</p>
+<pre><code> _____                _                   _   
+|  ___| __ ___  _ __ | |_ _ __   ___  ___| |_ 
+| |_ | &#39;__/ _ \| &#39;_ \| __| &#39;_ \ / _ \/ __| __|
+|  _|| | | (_) | | | | |_| |_) | (_) \__ \ |_ 
+|_|  |_|  \___/|_| |_|\__| .__/ \___/|___/\__|
+                         |_|                  
+</code></pre>
+<h3>why this and not X?</h3>
+<ul>
+<li>support for frontmatter</li>
+<li>theres only 2 dependencies, it&#39;s never gonna break</li>
+<li>everything is thoroughly documented, you&#39;re meant to continuously update it urself instead of waiting for someone else to update it</li>
+<li>dead simple</li>
+<li>customizable down to everything in templating and file structure</li>
+<li>written in javascript</li>
+</ul>
+<h3>why not this?</h3>
+<ul>
+<li>pretty barebones</li>
+<li>no integration with frontend frameworks, your templates are html with values parsed in index.js</li>
+<li>written in javascript</li>
+</ul>
+<h2>how to use::</h2>
+<pre><code class="language-bash">git clone https://github.com/qwool/frontpost
+cd frontpost
+npm i
+node prepareDirs
+node ./index.js
+</code></pre>
+<p>then, everything is in your dist directory.</p>
+<h2>how to ACTUALLY use it::</h2>
+<p>every X before an option means how much time you&#39;ll spend on it. everything is sorted in order of importance</p>
+<ul>
+<li><code>|___|</code> put all your .md files inside src/content</li>
+<li><code>|___|</code> any file inside src/static gets copied into dist/</li>
+<li><code>|x__|</code> it uses <a href="#frontmatter">frontmatter</a>, which can be <a href="#frontmatter">customized</a> as well!</li>
+<li><code>|xxx|</code> templates are preconfigured, but you can <a href="#templating">customize them</a></li>
+<li><code>|xx_|</code> also marked.js has functionality which is configured in index.js at line 20</li>
+<li><code>|xxx|</code> you can commit anytime! the codebase is in 1 file and it&#39;s small enough for anyone with JS knowledge to modify.</li>
+</ul>
+<h3>frontmatter</h3>
+<pre><code class="language-yaml">---
+title: Midwest Emo and why Nick Hartkop should be put down.
+description: idk? just my thoughts tbh
+(BUT if you disagree you&#39;re wrong!!)
+created: 2000-10-01 12:58:45
+customValue: anything
+---
+</code></pre>
+<p>if you&#39;ve used any actual markdown CMS you know this - just put a similar block at the start and you&#39;re set!<br>also you can add any of them to ur template!! just use <code>{fm value}</code> where value is a string. maybe u wanna add an author? idk u do u man
+again, every default thing in the order of importance:</p>
+<ul>
+<li><code>created: (any time JS will understand(so basically anything))</code> - it&#39;s needed for sorting your posts</li>
+<li><code>title: string</code> - very much useless if you have a heading first thing in your document, but just in case it&#39;s there. not required</li>
+<li><code>description</code> - actually add it bc otherwise it takes the first paragraph which sucks ass!!!!!</li>
+</ul>
+<h3>templating</h3>
+<p>everything is contained in files in src/templates</p>
+<p>default strings are as follows:</p>
+<p><code>articleListing.html</code></p>
+<ul>
+<li>created</li>
+<li>url</li>
+<li>description</li>
+<li>title</li>
+</ul>
+<p><code>post.html</code></p>
+<ul>
+<li>content</li>
+<li>title</li>
+<li>header</li>
+<li>created</li>
+</ul>
+<p><code>index.html</code></p>
+<ul>
+<li>articles</li>
+<li>header</li>
+</ul>
+<h3>beyond//contacts::</h3>
+<p>contact me anywhere from discord qwool#5851/@fuckcars to telegram @qwool if you decide you wanna contribute anything to this project
+and need some help decyphering/understanding any part of it.</p>
+<h2>to install dependencies::</h2>
+<pre><code class="language-bash">npm install
+</code></pre>
+<p>3 external dependecies - marked.js, js-yaml and strftime.</p>
+<h2>to run::</h2>
+<pre><code class="language-bash">node index.js
+</code></pre>
+<h2>thanks to!</h2>
+<ul>
+<li><a href="https://github.com/markedjs/marked">marked.js</a> contributors</li>
+<li>whoever fixes lines 56-88</li>
+</ul>
+
+  </main>
+  <hr>
+  <footer>made with <a href="https://github.com/qwool/frontpost">frontpost</a> by me!!!</footer>
+</body>
+
+<script defer>
+const author = " {fm author} "
+const created = " {fm created} "
+if (author == ""  || author.includes("fm author")) document.getElementById("author").style.display = 'none';
+if (created == "" || created.includes("fm created")) document.getElementById("created").style.display = 'none';
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

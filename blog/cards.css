@@ -1,0 +1,53 @@
+a.fill-div {
+  display: block;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+}
+.card {
+  height: 100%;
+  cursor: pointer;
+  border:1px solid rgba(255, 255, 255, 25%);
+  border-radius: 4px;
+  padding: .3rem;
+  padding-left: .5rem;
+  padding-right: .5rem;
+  transition: all .5s;
+  line-height: 16pt;
+  flex: 1;
+  min-width: calc(50% - 10px);
+}
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+@media (min-width: 100ch) {
+  .grid {
+    display: grid;
+    row-gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 150ch) {
+  .grid {
+    display: grid;
+    row-gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.card > .title {
+  font-weight: 600;
+  text-decoration: underline !important;
+}
+.card > .description {
+  text-decoration: none !important;
+}
+.card > a {
+  text-decoration: none;
+}
+
+.card:hover {
+  scale: 1.03;
+  background-color: rgba(255, 255, 255, 25%);
+}
